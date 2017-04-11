@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/*-------------------подключаем шрифты--------------------*/
+@font-face{
+    font-family:RobotoSlab;
+    src: url("fonts/RobotoSlab-Regular.ttf");
+}
+@font-face{
+    font-family:RobotoSlab;
+    font-weight:bold;
+    src: url("fonts/RobotoSlab-Bold.ttf");
+}
+
+@font-face{
+    font-family:RobotoSlab;
+    font-weight:light;
+    src: url("fonts/RobotoSlab-Light.ttf");
+}
+
+@font-face{
+    font-family:Roboto;
+    font-weight:light;
+    src: url("fonts/Roboto-Light.ttf");
+}
+
+@font-face{
+    font-family:ProximaNova;
+    font-weight:light;
+    src: url("fonts/proximanova-light.otf");
+}
+
+@font-face{
+    font-family:ProximaNova;
+    font-weight:bold;
+    src: url("fonts/proximanova-bold.otf");
+}
+/*-------------------Назначаем общие значение шрифтов для элементов--------------------*/
+p, ul, a{
+    font-family:RobotoSlab;
+    color: #31353e;
+}
+
+.row{
+    background-color: #edeff1;
+    width: 100%;
+    min-width: 960px;
+}
+
+.row:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.col-2{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.col-3{
+    width: 33.33333333%;
+    float: left;
+    text-align: center;
+}
+.col-6{
+    width: 66%;
+    float: left;
+    text-align: center;
+}
+
+/*-------------------Блок 1--------------------*/
+#row1{
+    height: 147px;
+}
+
+.work_column{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.work_column:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+#logo_name{
+    margin-top: 40px;
+    font-family: RobotoSlab;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+
+#logo_surname{
+    font-family: RobotoSlab;
+    font-size: 16px;
+    letter-spacing: .6px;
+    color: #dd4b2b;
+}
+
+/*-------------------Верхнее меню--------------------*/
+nav #top_menu{
+    float: right;    
+}
+#top_menu{
+    text-align: center;
+    list-style: none;
+    line-height: 147px;
+}
+
+#top_menu li{
+    display: inline-block;
+    }
+
+#top_menu li a{
+    font-family: RobotoSlab;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .5s;
+    line-height: 49px;
+    padding-left: 21px;
+    padding-right: 21px;
+    }
+
+#top_menu li a:hover{
+    background-color: #dd4b2b;
+    border-radius: 21px;
+    color: white;
+    transition: color .5s;
+    }
+
+/*-------------------Блок 2--------------------*/
+#row2{
+    background: url(../img/bg_index_001.jpg) repeat-x;
+    background-size: cover;
+    height: 1320px;
+    overflow: hidden;
+}
+
+.head_part_row2{
+    padding-top: 460px; 
+}
+
+/*-------------------Меню блока 2--------------------*/
+.menu_part_row2{
+    padding-top: 120px;
+}
+
+.img_container{
+    position: relative;    
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img_menu_row2{
+    width: 150px;
+}
+/*-----------------Эффекты при наведении на иллюстрацию в меню блока 2------------------*/
+.img_cover, .img_cover2{
+    position: absolute;
+    top: 75px;
+    right: 75px;
+    width: 1px;
+    height: 1px;
+    border-radius: 0px;
+    background-color: #525554;
+}
+
+.img_container:hover .img_cover{
+    width: 150px;
+    height: 150px;
+    top:0;
+    right: 0px;
+    border-radius: 75px;
+    opacity: 0.3;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.img_container:hover .img_cover2{
+    width: 150px;
+    height: 150px;
+    top:0;
+    right: 0px;
+    border-radius: 75px;
+    opacity: 0.1;
+    transition: .5s ease-out 0.2s;
+    opacity: 0;
+}
+
+.head1{
+    font-weight:light;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 1px #939095;
+}
+
+.subhead1{
+    font-weight:bold;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 48px;
+    text-shadow: 0px 1px #939095;
+}
+
+.head2{
+    font-weight:bold;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 30px;
+}
+
+.subhead2{
+    margin-top: 27px;
+    font-family: Roboto;
+    font-weight:light;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.read_more_big{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 79px;
+    width: 212px;
+    height: 54px;
+    border-radius: 23px;
+    background-color: white;
+    text-align: center;
+}
+
+.read_more_big a{
+    text-decoration: none;
+    display: block;
+     width: 212px;
+    height: 54px;
+    line-height: 54px;
+    color: #612316;
+    font-size: 18px;
+    text-align: center;
+}
+
+.read_more_big:hover{
+    background-color: #612316;
+    text-align: center;
+    border-radius: 23px;
+    transition: 0.5s;
+}
+
+.read_more_big:hover a{
+    color: white;
+    transition: 0.5s;
+}
+
+.work_column_row3{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 65px;
+}
+
+.head3{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 65px;
+    text-align: center;
+}
+
+#row3{
+    height: 790px;
+}
+
+.img_menu_row3{
+    width: 370px;
+    height: 254px;
+}
+
+.head4{
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.head4_after{
+    font-family:Roboto;
+    font-weight:light;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 18px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+/*Маленькие "read more" с эффектами*/
+.read_more_small{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 179px;
+    height: 54px;
+    border-radius: 27px;
+    background-color: white;
+    text-align: center;
+}
+
+.read_more_small a{
+    @font-family: Roboto;
+    text-decoration: none;
+    display: block;
+     width: 179px;
+    height: 54px;
+    line-height: 54px;
+    color: #612316;
+    font-size: 15px;
+    text-align: center;
+}
+
+.read_more_small:hover{
+    background-color: #612316;
+    text-align: center;
+    border-radius: 23px;
+    transition: 0.5s;
+}
+
+.read_more_small:hover a{
+    color: white;
+    transition: 0.5s;
+}
+/*-------------------Блок 4--------------------*/
+#row4{
+    background: url(../img/bg_index_002.jpg) repeat-x;
+    background-size: cover;
+    height: 370px;
+    overflow: hidden;
+    position: relative;
+}
+
+#row4_after{
+    height: 370px;
+    width: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.head3_white{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
+    text-align: center;
+    color: white;
+}
+
+.head3_white_after{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:Roboto;
+    font-weight:light;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 18px;
+    padding-left: 45px;
+    padding-right: 45px;
+    color: white;
+}
+/*-------------------форма подписки по e-mail--------------------*/
+.form_email{
+    width: 508px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 53px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-clip: padding-box;
+    border-radius: 23px;
+    line-height: 53px;
+    position: relative;
+}
+
+.form_email input{
+    width: 508px;
+    height: 53px;
+    border: 0px solid white;
+    background-color: rgba(243, 243, 243, 0.1);
+    line-height: 53px;
+    padding-left: 35px;
+    border-radius: 23px;
+    font-family: RobotoSlab;
+    color: #f3f4f6;
+    font-size: 18px;
+}
+
+/*Убираем обводку при активной форме (обводке квардрат, а форма со скруглениями)*/
+.form_email input:focus{
+    outline: none;
+}
+
+#form_email_button{
+    width: 210px;
+    height: 53px;
+    background-color: white;
+    position: absolute;
+    top:-1px;
+    right: -1px;
+    font-family: RobotoSlab;
+    color: #612316;
+    font-size: 18px;
+    line-height: 53px;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*-------------------Блок 5--------------------*/
+#row5{
+    height: 1020px;
+}
+
+.white_text{
+    color: white;
+}
+
+.row5_block_left{
+    padding-top: 68px;
+    width: 50%;
+    float: left;
+    padding-right: 30px;
+}
+
+.row5_block_right{
+    padding-top: 68px;
+    width: 50%;
+    float: right;
+    padding-right: 30px;
+}
+
+
+.row5_block_right img{
+    width: 587px;
+    height: 405px;
+    margin-right: -40px;
+}
+
+.row5_block_left img{
+    width: 587px;
+    height: 405px;
+    margin-left: -40px;
+}
+
+.row5_text{
+    font-family: Roboto;
+    font-size: 16px;
+    color: #191b29;
+}
+
+.row5_text p{
+    padding-top: 40px;
+}
+
+.row5_text p:first_child{
+    padding-top: 20px;
+}
+
+.head3_black{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    text-align: left;
+    color: #191b29;
+}
+
+/*-------------sign up с эффектами------------*/
+/*Маленькие "read more" с эффектами*/
+.sign_up_small{
+    margin-top: 40px;
+    width: 179px;
+    height: 54px;
+    border-radius: 27px;
+    background-color: #dd4b2b;
+    text-align: center;
+}
+
+.sign_up_small a{
+    text-decoration: none;
+    display: block;
+    width: 179px;
+    height: 54px;
+    line-height: 54px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.sign_up_small:hover{
+    background-color: white;
+    border: 1px solid #dd4b2b;
+    border-radius: 23px;
+    transition: 0.5s;
+}
+
+.sign_up_small:hover a{
+    color: #dd4b2b;
+    transition: 0.5s;
+    line-height: 52px;
+}
+
+/* кнопка синего цвета*/
+
+.sign_up_small_blue{
+    background-color: #4b4e73;
+}
+
+/*-------------------Блок 6--------------------*/
+#row6{
+    background-color: #d75d0e;
+    height: 410px;
+    padding-top: 90px;
+}
+
+.List_row6{
+    list-style: none;
+}
+
+.List_row6 li{
+    font-family: Roboto;
+    font-size: 18px;
+    color: white;
+    line-height: 34px;
+    text-align: center;
+}
+
+/*-------------------Блок 7--------------------*/
+#row7{
+    background: url(../img/bg_index_003.jpg) repeat-x; 
+    background-size: cover;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+
+#row7_after{
+    height: 380px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+#row7 .col-2{
+    padding-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+#row7 p{
+    font-family:ProximaNova;
+    font-weight:light;   
+    font-size: 18px;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+}
+
+.Proxima_bold{
+    font-family:ProximaNova;
+    font-weight:bold;   
+}
+
+
