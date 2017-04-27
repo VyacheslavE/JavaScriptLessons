@@ -1,0 +1,432 @@
+*{
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 0px;
+}
+
+h3{
+padding-top: 10px;    
+}
+
+$color1: orange;
+$color2: orange;
+
+/*-------------------task 8 ver1--------------------*/
+
+#main{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.row{
+display:flex;    
+flex: 0 100%;
+flex-flow: column nowrap;
+background-color: #cecece;
+border: 1px solid white; 
+}
+
+.form-element{
+    padding-top: 1em;
+    border: 1px solid white;
+    flex: 1 15%;
+    flex-flow: row wrap;
+}
+
+input{
+    margin-top: 5px;
+}
+
+#form1, #form2{
+    display: flex;
+    flex: 0 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+input::placeholder{
+    color: rgba(78, 69, 18, 0.3);
+}
+
+
+
+input[name="radioBox1"]{
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
+
+input[name="radioBox1"]+label{
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+label{
+    padding: 0px;
+    display:block;
+    cursor: pointer;
+}
+
+#colorSelect{
+    width: 150px;
+    height: 50px;
+}
+
+
+/*-------------------task 8 ver2--------------------*/
+/*input[type="text"]#firstNameForm2*/
+
+
+#firstNameForm2, #lastNameForm2{
+    height: 30px;
+    width: 250px;
+    padding: 4px;
+    border: 1px solid #398ff2;
+    border-radius: 5px;
+    outline: none;
+    box-shadow:  3px 3px 5px #888888;
+    transition: 1s;
+    }
+
+#firstNameForm2:focus, #lastNameForm2:focus{
+    background-color: #f5ece1;
+}
+
+#form2 .form-element{
+    padding-top: 1em;
+    border: 1px solid white;
+    flex: 1 33.3333%;
+    flex-flow: row wrap;
+}
+
+#colorSelectForm2{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #8e8e7e;
+    background-color: #f5ece1;
+}
+
+#textArrCustomForm2{
+    border-radius: 4px;
+    background-color: #f5ece1;
+}
+
+#range1Form2{
+    display: block; 
+    float: left;
+    width: 60%;
+    margin-right: 2%;
+}
+
+#range1Form2 + output{
+    display: block;
+    width: 10%;
+    height: 30px;
+    text-align: center;
+    background-color: #f5ece1;
+    border-radius: 5px;
+}
+
+/*radiogroup_v2*/
+.radio2{
+    display: block;
+    float: none;
+    margin: 0 0 0.1em 0;
+    padding: 0px;
+}
+
+.radio2:first-child{
+    padding-bottom: 10px;
+}
+
+input[name="radioBox2"]{
+    display: none;
+}
+
+input[name="radioBox2"]+label{
+    display: block;
+    font: 14px;
+    color: #042626;
+    width: 300px;
+    height: 30px;
+}
+
+input[name="radioBox2"]+label span{
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    border: 1px solid #042626;
+    border-radius: 50%;
+    background-color: #042626;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+input[name="radioBox2"]:checked+label span{
+    background-color: orange;
+     border: 1px solid orange;
+    width: 18px;
+    height: 18px;
+}
+/*checkbox_v2*/
+
+input[class="CHB2"]{
+    display: none;
+}
+
+input[class="CHB2"]+label{
+   display: block;
+    font: 14px;
+    color: #042626;
+    width: 300px;
+    height: 30px; 
+}
+
+input[class="CHB2"]+label span{
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    border: 1px solid #035d5d;
+    border-radius: 10%;
+    background-color: #035d5d;
+    transition: 0.5s;
+    margin-right: 10px;
+    position: relative;
+}
+
+input[class="CHB2"]+label span:after{
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    color: #035d5d;
+    transition: 0.2s;
+}
+
+input[class="CHB2"]:checked+label span{
+    background-color: orange;
+     border: 1px solid orange;
+    width: 18px;
+    height: 18px;
+}
+
+input[class="CHB2"]:checked+label span:after{
+    font-size: 22px;
+    left: 0;
+    top:-6px;
+}
+
+/*---------------------9_1------------------------*/
+#glitch{
+    font-size: 58px;
+    font-family: sans-serif;
+    text-shadow: 1px 2px 0px rgba(255, 0, 246, 1); 
+    color: #353535;
+}
+
+/*-----------------SQ_9_2--------------------*/
+#SQ_9_2{
+    width: 237px;
+    height: 48px;
+    margin: 40px 0 0 40px;
+    background-color: #ff3b3b;
+    border: 1px solid #b51b1b;
+    border-radius: 7px;
+    padding: 0;
+}
+ 
+#SQ_9_2 a{
+    text-align: center;
+    font-size: 26px;
+    font-family: sans-serif;
+    text-shadow: 1px 2px 0px rgba(231, 0, 0, 1);  
+    color: #ffffff;
+    width: 237px;
+    height: 48px;
+    cursor: pointer;
+    display: block;
+    line-height: 48px;
+    padding: 0;
+    margin: -1px;
+}
+
+#SQ_9_2:hover{
+    box-shadow: inset 5px 6px 20.64px 3.36px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s;
+}
+
+/*-----------------SQ_9_3--------------------*/
+
+#SQ_9_3{
+    width: 256px;
+    height: 210px;
+    margin: 40px 0 0 40px;
+    border: 1px solid #c2c2c2;
+    background: linear-gradient(-45deg, #6db5ea 0%, #704bae 50%, #b92360 100%);
+}
+
+/*-----------------SQ_9_4--------------------*/
+
+#SQ_9_4{
+    width: 218px;
+    height: 218px;
+    border-radius: 50%;
+    margin: 40px 0 0 40px;
+    border: 1px solid #c2c2c2;
+    /*background: repeating-linear-gradient(-45deg, #290a59 -21px, #290a59 42px, #ff7c00 42px, #ff7c00 84px) fixed;*/
+  background: #290a59; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #290a59 0%, #290a59 23%, #ff7c00 24%, #ff7c00 51%, #ff7c00 51%, #290a59 52%, #290a59 79%, #ff7c00 80%, #ff7c00 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #290a59 0%,#290a59 23%,#ff7c00 24%,#ff7c00 51%,#ff7c00 51%,#290a59 52%,#290a59 79%,#ff7c00 80%,#ff7c00 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #290a59 0%,#290a59 23%,#ff7c00 24%,#ff7c00 51%,#ff7c00 51%,#290a59 52%,#290a59 79%,#ff7c00 80%,#ff7c00 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#290a59', endColorstr='#ff7c00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+#SQ_9_5{
+    border: 1px solid #c2c2c2;
+    margin: 40px 0 40px 40px;
+    width: 535px;
+    height: 129px;
+    background-color: #0080a0;
+    box-shadow: 0px 22px 24px 0px rgba(255, 0, 0, 0.26); 
+    
+}
+
+#list_9_6_ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: num;
+}
+
+#list_9_6_ul li{
+    display: block;
+    width: 30%;
+    margin: 40px 0 0 40px;
+    counter-increment: num;
+    position: relative;
+    display: block;
+    padding-top: 25px;
+    padding-left: 147px;
+    font-size: 17px;
+    font-family: sans-serif;
+    border: 1px solid #c2c2c2;
+    height: 104px;
+    background-color: white;
+    box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 0.26); 
+}
+#list_9_6_ul li:before{
+    box-sizing: border-box;
+    font-family: Georgia;
+    font-size: 75px;
+    width: 125px;
+    height: 104px;
+    text-align: center;
+    height: 102px;
+    position: absolute;
+    top:0;
+    left: 0;
+    content: "0" counter(num);
+    border-right: 1px solid #c2c2c2;
+}
+
+
+#list_9_6_ul li:nth-child(1):before{
+    background: linear-gradient(to right, #f11314, #bc0606);
+}
+
+#list_9_6_ul li:nth-child(2):before{
+    background: linear-gradient(to right, #f29e14, #bd6a07);
+}
+#list_9_6_ul li:nth-child(3):before{
+    background: linear-gradient(to right, #1cf265, #32be19);
+}
+#list_9_6_ul li:nth-child(4):before{
+    background: linear-gradient(to right, #c614f3, #7e06ba);
+}
+
+#list_9_6_ul li:nth-child(1):after, #list_9_6_ul li:nth-child(2):after{
+    content: "Новинка";
+    color: #ff0000;
+    font-family: Georgia;
+    font-size: 17px;
+    position: absolute;
+    text-align: center;
+    top:40%;
+    left: -47px;
+    transform: rotate(-90deg);
+}
+
+/*------------------------SQ_9_7------------------------------*/
+
+#SQ_9_7{
+    display: block;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    background-color: dodgerblue;
+    font: 12pt/16pt sans-serif; 
+    color: white;
+    padding: 5px;
+    margin: 40px 0 70px 400px;
+}
+
+#SQ_9_7:after{
+    display: block;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    background-color: orange;
+    font: 14pt/16pt sans-serif; 
+    color: white;
+    padding: 5px;
+    content: "Анимация при наведении";
+    line-height: 300px;
+    text-align: center;
+    transition: 1s linear;
+}
+
+#SQ_9_7:hover:after{
+    transform: rotate(-90deg);
+}
+
+/*------------------------SQ_9_8------------------------------*/
+
+#SQ_9_8{
+    display: block;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    background-color: dodgerblue;
+    font: 12pt/16pt sans-serif; 
+    color: white;
+    padding: 5px;
+    margin: 40px 0 70px 400px;
+}
+
+#SQ_9_8:after{
+    display: block;
+    width: 500px;
+    height: 290px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    font: 14pt/16pt sans-serif; 
+    color: white;
+    padding: 5px;
+    content: "Анимация при наведении";
+    line-height: 290px;
+    text-align: center;
+    transition: 1s linear;
+}
+
+#SQ_9_8:hover:after{
+    transform: translateX(500px);
+}

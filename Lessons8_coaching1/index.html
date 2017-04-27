@@ -1,0 +1,262 @@
+<!Doctype html>
+
+    <html  lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Урок 8-9. Формы.HTMLfeatAnimation</title>
+        
+        <meta name="description" content="Flex-1">
+        <meta name="keywords"  content="Forms, HTML5, css">
+        <meta name="viewport" content="width=device-width">
+           
+           <link rel="shortcut icon" href="img/icon.png" type="image/png">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+       <div id="main">
+            <div class="row">
+            <h1>Урок 8-9</h1>
+            </div>
+<!------------------------Вариант 1---------------------->     
+            <div class="row">
+            <h2>Урок 8</h2>
+            <h3>Вариант 1</h3>
+            <form id="form1" action="https://weblaboratory.in.ua/mail/" metod="get" target="_blank" oninput="range2.value=range1.value">
+            <div class="form-element">
+            <label for="firstNameForm1">Введите ваше имя</label>
+            <input type="text" id="firstNameForm1" name="firstName" value="" placeholder="first name">
+            </div>
+            <div class="form-element">
+            <label for="lastNameForm1">Введите вашу фамилию</label>
+            <input type="text"  id="lastNameForm1" name="lastName" value="" placeholder="last name">
+            </div>
+            
+            <div class="form-element">
+                <b>Выберите метод передачи:</b><Br/>
+            <input type="radio" id="radioBox1_01" name="radioBox1" value="get">
+            <label for="radioBox1_01">GET</label>
+            <input type="radio" id="radioBox1_02" name="radioBox1" value="post">
+                <label for="radioBox1_02">POST</label>
+            <input type="radio" id="radioBox1_03" name="radioBox1" value="NovoyPochtoy">
+                <label for="radioBox1_03">Novoy Pochtoy</label>
+            </div>
+            
+            <div class="form-element">
+                <b>Выберите все возможные варианты:</b><Br/>
+            <label> <input type="checkbox" name="checkboxBox1" value="choise1">choise1</label>
+            <label> <input type="checkbox" name="checkboxBox2" value="choise2">choise2</label>
+            <label> <input type="checkbox" name="checkboxBox3" value="choise3">choise3</label>
+            <label> <input type="checkbox" name="checkboxBox4" value="choise4">choise4</label>
+            </div>
+            
+            <div class="form-element">
+                <b>Выберите все возможные варианты и тут тоже:</b><Br/>
+            <select name="selection1" size="3">
+            <option value="choise1">choise1</option>
+            <option value="choise2">choise2</option>
+            <option value="choise3">choise3</option>
+            <option value="choise4">choise4</option>
+            <option value="choise5">choise5</option>
+            <option value="choise6">choise6</option>
+            <option value="choise7">choise7</option>
+            <option value="choise8">choise8</option>
+            </select>
+            </div>
+            
+            <div class="form-element">
+                <b>И еще тут:</b><Br/>
+            <select name="selection2[]" multiple>
+            <option value="choise22">choise22</option>
+            <option value="choise23">choise23</option>
+            <option value="choise24">choise24</option>
+            <option value="choise25">choise25</option>
+            <option value="choise26">choise26</option>
+            <option value="choise27">choise27</option>
+            </select>
+            </div>
+            
+             <div class="form-element">
+                <b>Выберите цвет:</b><Br/>
+            <input type="color" id="colorSelect" name="color" value="#e8d600">
+            </div>
+            
+             <div class="form-element">
+                <b>напишите комментарий:</b><Br/>
+                 <textarea name="textArr" rows="7" cols="20"></textarea>
+            </div>
+            
+            <div class="form-element">
+            <b>Выберите число от 1 до 20</b><Br/>
+            <input type="range" name="range1" min="1" max="20">
+                <output type="number" for="range1" name="range2" min="1" max="20">11</output>
+            </div>
+            
+            <div class="form-element">
+            <b>Введите телефон в таком формате:</b>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx">
+            </div> 
+            
+            <div class="form-element">
+            <input type="submit">
+            </div>
+
+            </form>
+            
+            </div>
+            
+            <!------------------------Вариант 2---------------------->     
+            
+            <div class="row">
+            <h3>Вариант 2</h3>
+             <form id="form2" action="https://weblaboratory.in.ua/mail/" oninput="range2Form2.value=range1Form2.value"> <!--oninput="if(result.value==1)result.value='ok'">-->
+            
+           <div class="form-element">
+            <label for="firstNameForm2">Введите ваше имя</label>
+            <input type="text" id="firstNameForm2" name="firstName" value="" placeholder="first name">
+            </div>
+            <div class="form-element">
+            <label for="lastNameForm2">Введите вашу фамилию</label>
+            <input type="text"  id="lastNameForm2" name="lastName" value="" placeholder="last name">
+            </div>
+            
+                    <div class="form-element">
+                       <div class="radio2">
+                        <b>Выберите метод передачи:</b>
+                        </div>
+                    <div class="radio2">
+                    <input type="radio" name="radioBox2" id="radioBox2_01" value="get">
+                        <label for="radioBox2_01"><span></span>GET</label>
+                    </div>
+                    <div class="radio2">
+                    <input type="radio" name="radioBox2"  id="radioBox2_02" value="post">
+                        <label for="radioBox2_02"><span></span>POST</label>
+                    </div>
+                    <div class="radio2">
+                    <input type="radio" name="radioBox2"  id="radioBox2_03" value="NovoyPochtoy">
+                    <label for="radioBox2_03"><span></span>Novoy Pochtoy</label>
+                    </div>
+                </div>
+            
+            <div class="form-element">
+                <b>Выберите все возможные варианты:</b><Br/>
+            <input type="checkbox" id="CHB2_1" class="CHB2" name="checkboxBox21" value="choise1">
+            <label  for="CHB2_1"><span></span>choise1</label>
+            <input type="checkbox" id="CHB2_2" class="CHB2" name="checkboxBox22" value="choise2">
+            <label for="CHB2_2"><span></span>choise2</label>
+            <input type="checkbox" id="CHB2_3" class="CHB2" name="checkboxBox23" value="choise3">
+            <label for="CHB2_3"><span></span>choise3</label>
+            <input type="checkbox" id="CHB2_4" class="CHB2" name="checkboxBox24" value="choise4">
+            <label for="CHB2_4"><span></span>choise4</label>
+            </div>
+            
+            <div class="form-element">
+                <b>Выберите все возможные варианты и тут тоже:</b><Br/>
+            <select name="selection1[]" size="3" multiple>
+            <option value="choise1">choise1</option>
+            <option value="choise2">choise2</option>
+            <option value="choise3">choise3</option>
+            <option value="choise4">choise4</option>
+            <option value="choise5">choise5</option>
+            <option value="choise6">choise6</option>
+            <option value="choise7">choise7</option>
+            <option value="choise8">choise8</option>
+            </select>
+            </div>
+            
+            <div class="form-element">
+                <b>И еще тут:</b><Br/>
+            <select name="selection2[]" multiple>
+            <option value="choise22">choise22</option>
+            <option value="choise23">choise23</option>
+            <option value="choise24">choise24</option>
+            <option value="choise25">choise25</option>
+            <option value="choise26">choise26</option>
+            <option value="choise27">choise27</option>
+            </select>
+            </div>
+            
+             <div class="form-element">
+                <b>Выберите цвет:</b><Br/>
+            <input type="color" id="colorSelectForm2" name="colorCustom" value="#e8d600">
+            </div>
+            
+             <div class="form-element">
+                <b>напишите комментарий:</b><Br/>
+                 <textarea name="textArrCustom" id="textArrCustomForm2" rows="7" cols="20"></textarea>
+            </div>
+            
+            <div class="form-element">
+            <b>Выберите число от 1 до 20</b><Br/>
+            <input type="range" name="range1Form2" id="range1Form2" min="1" max="20">
+                <output type="number" for="range1Form2" name="range2Form2" min="1" max="20">11</output>
+            </div>
+            
+            <div class="form-element">
+            <b>Введите телефон в таком формате:</b>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx">
+            </div> 
+            
+            <div class="form-element">
+            <input type="submit">
+            </div>
+           
+             </form>
+            
+            </div>
+<!------------------------Урок 9. Задание 1---------------------->
+
+            <h2>Урок 9</h2>
+            <div class="row">
+                
+            <h3>Задание 1</h3>
+                <div id="glitch">Glitch эффект</div>
+            <h3>Задание 2</h3>
+                <div id="SQ_9_2"><a target="#">Отправить</a></div>
+            <h3>Задание 3_1</h3>
+                <div id="SQ_9_3"></div>
+            <h3>Задание 3_2</h3>
+                <div id="SQ_9_4"></div>
+            <h3>Задание 4</h3>
+                <div id="SQ_9_5"></div>
+            <h3>Задание 5</h3>
+                <div id="list_9_6">
+                    <ol id="list_9_6_ul">
+                        <li>Один из признанных классиков маркетинга Ф.Котлер определяет это так: обсценная идиома позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует периодический стиль.</li>
+                        <li>Один из признанных классиков маркетинга Ф.Котлер определяет это так: обсценная идиома позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует периодический стиль.</li>
+                        <li>Один из признанных классиков маркетинга Ф.Котлер определяет это так: обсценная идиома позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует периодический стиль.</li>
+                        <li>Один из признанных классиков маркетинга Ф.Котлер определяет это так: обсценная идиома позволяет пренебречь колебаниями корпуса, хотя этого в любом случае требует периодический стиль.</li>
+                    </ol>
+                </div>
+                
+                <h3>Задание 6</h3>
+                <div id="SQ_9_7">
+                    Американский диетолог и специалист по правильному питанию в Yummly Эдвина Кларк рассказала, какие продукты ускоряют метаболизм.
+
+                    По словам эксперта, обмен веществ играет важную роль в процессе похудения. Зачастую именно медленный метаболизм становится причиной лишнего веса и плохого самочувствия, сообщает Women’s Health. Чтобы улучшить усвоение пищи и начать эффективно худеть, Эдвина Кларк рекомендует добавить в рацион следующие продукты:
+
+
+                    Низкокалорийный сельдерей содержит много клетчатки и воды. Он славится разнообразием минералов, которые улучшают метаболизм. Сельдерей содержит больше всего фосфора среди корнеплодов, много кальция, калия и цинка, а также магний и железо. 
+                </div>
+                
+                <div id="SQ_9_8">
+                    Американский диетолог и специалист по правильному питанию в Yummly Эдвина Кларк рассказала, какие продукты ускоряют метаболизм.
+
+                    По словам эксперта, обмен веществ играет важную роль в процессе похудения. Зачастую именно медленный метаболизм становится причиной лишнего веса и плохого самочувствия, сообщает Women’s Health. Чтобы улучшить усвоение пищи и начать эффективно худеть, Эдвина Кларк рекомендует добавить в рацион следующие продукты:
+
+
+                    Низкокалорийный сельдерей содержит много клетчатки и воды. Он славится разнообразием минералов, которые улучшают метаболизм. Сельдерей содержит больше всего фосфора среди корнеплодов, много кальция, калия и цинка, а также магний и железо. 
+                </div>
+                </div>
+                
+              
+            </div>
+            
+<!------------------------Урок 9. Задание 2---------------------->
+
+      </div>
+    </body>
+    
+</html>
