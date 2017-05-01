@@ -1,0 +1,374 @@
+.container {
+    display: flex;
+    width: 960px;
+    margin: auto;
+    position: relative;
+}
+
+/* 
+--------------------
+Header 
+--------------------
+*/
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    display: flex;
+}
+
+.logo {
+    color: #7f8c8d;
+    font-family: 'Arial';
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    font-family: 'Arial';
+    font-size: 21px;
+    color: #7f8c8d;
+    text-decoration: none;
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li + li {
+    border-left: 1px solid #7f8c8d;
+}
+
+.button1 {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    color: #fff;
+    background-color: #f39c12;
+    text-decoration: none;
+    padding: 7px 21px;
+    display: inline-block;
+    border-radius: 3px;
+}
+.button1.i-small{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.left-header-block {
+    justify-content: flex-start;
+    flex: 0 30%;
+}
+
+.right-header-block {
+    justify-content: flex-end;
+    flex: 0 70%;
+    text-align: right;
+    padding-top: 13px;
+}
+
+.menu-container,
+.button-container {
+    display: inline-block;
+}
+
+/* 
+--------------------
+Block1 
+--------------------
+*/
+.left-block{
+    flex: 0 50%;
+    
+}
+.right-block{
+    flex: 0 50%;
+    float: left;
+}
+.right-block h2{
+    text-align: center;
+    font: 46px 'chunkfiveroman', sans-serif;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.right-block h3{
+    text-align: center;
+    font: 20px 'chunkfiveroman', sans-serif;
+    color: #bdc3c7;
+    margin-top: 0;
+}
+.text-block p:first-child{
+    font: 14px Arial;
+    color: #f39c12;
+    text-transform: uppercase;
+     line-height: 21px;
+}
+.text-block p{
+    font: 14px Arial;
+    color: #fff;
+    line-height: 21px;
+}
+
+.block1 {
+    height: 407px;
+    background: url(../images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.mac{
+    width: 447px;
+    height: 440px;
+    background: url(../images/mac.png);
+    position: relative;
+        top: -15px;
+}
+.mac h2{
+    font-family: 'chunkfiveroman';
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 51px;
+}
+.mac-button-container{
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-left: 18px;
+    margin-right: 19px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 177px;
+}
+
+
+/*-------------------------960px------------------------*/
+/* 
+--------------------
+Header 960
+--------------------
+*/
+
+@media screen and (max-width: 960px){
+    
+.block1 {
+        display: flex;
+        flex: 1 100%;
+    }
+    
+.left-header-block {
+    text-align: center;
+    flex: 0 100%;
+}
+
+.right-header-block {
+    text-align: center;
+    padding-top: 13px;
+}
+    
+/* 
+--------------------
+Block1  960
+--------------------
+*/
+.container {
+    display: flex;
+    flex: 1 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+    }
+    
+.left-block{
+    display: flex;
+    flex: 1 100%;
+    order: 2;
+    text-align: center;
+    flex-flow: column nowrap;
+}
+.right-block{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 0 3em 0;
+    margin: 0;
+    flex: 1 100%;
+    order: 1;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+.mac{
+    width: 305px;
+    height: 300px;
+    background-size: contain;
+    top: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+.mac h2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 21px;
+}
+.mac-button-container{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 9px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 107px;
+}
+}
+
+/*-------------------------320px------------------------*/
+
+@media screen and (max-width: 320px){
+/* 
+--------------------
+Head  320
+--------------------
+*/
+
+ .logo {
+    flex-flow: column nowrap;
+    text-align: center;
+    padding-bottom: 2em;
+}
+    
+.logo img {
+    width: 70px;
+}
+    
+.right-header-block {
+    display: flex;
+    text-align: center;
+    padding-top: 13px;
+    flex-flow: column nowrap;
+    flex: 1 40%;
+}
+    
+.left-header-block{
+    display: flex;
+    }
+    
+.menu-container{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    }
+    
+.menu{
+    display: flex;
+    flex-flow: column nowrap;
+    }
+
+.menu li{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    }
+    
+.menu li + li {
+    border-left: 0px solid #7f8c8d;
+    border-bottom: 1px solid #7f8c8d;
+}
+.menu li {
+    border-bottom: 1px solid #7f8c8d;
+}
+    
+ .menu li:last-child {
+    border-bottom: 0px solid #7f8c8d;
+}
+    
+.menu a, .button1{
+    font-size: 18px;
+}
+
+/* 
+--------------------
+Block1  320
+--------------------
+*/
+
+.right-block {
+    padding: 0 0 1em 0;
+    }
+    
+ .right-block h2{
+    font: 30px 'chunkfiveroman', sans-serif;
+}
+.right-block h3{
+    font: 15px 'chunkfiveroman', sans-serif;
+}
+.text-block p:first-child{
+    font: 12px Arial;
+     line-height: 15px;
+}
+.text-block p{
+    font: 12px Arial;
+    line-height: 15px;
+}
+.left-block{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(0, 24, 57); 
+    }
+.mac{
+    flex-flow: column nowrap;
+    height: 200px;
+    width: 100%;
+    background: none;
+    position: inherit;
+}
+    
+.mac h2{
+    flex: 1 100%;
+    flex-flow: row nowrap;
+    font-size: 20px;
+    top: 10px;
+    padding: 0;
+    margin: 0;
+    position: inherit;
+}
+    
+.mac h2:after{
+clear: both;
+content: '';
+display: block;
+}
+.mac-button-container{
+    flex-flow: column nowrap;
+    padding: 0;
+    padding-top: 0.3em;
+    position: inherit;
+    left: 0;
+    right: 0;
+    background: none;
+}
+.button1 i-small{
+    margin-bottom: 1.5em;
+    }
+}

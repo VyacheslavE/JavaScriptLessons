@@ -1,0 +1,156 @@
+.block1{
+	padding-bottom: 30px;
+	background: url(../images/bg_block1.jpg);
+}
+.block1 .container{
+	border-bottom: 1px solid #505369;
+	padding-bottom: 29px;
+	padding-top: 38px;
+	margin-bottom: 155px;
+}
+
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.logo{
+	float: left;
+    margin-left: 1em;
+}
+.menu{
+	float: right;
+}
+
+.menu a{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-decoration: none;
+	opacity: 0.75;
+	margin-left: 3em;
+}
+
+.menu a:last-child{
+	margin-right: 2em;
+}
+
+.clear{
+	clear: both;
+}
+
+.title1{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 65px;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 71px;
+	margin-bottom: 46px;
+}
+.title1_sub{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	color: #ffffff;
+	line-height: 33px;
+}
+
+.button_block{
+	text-align: center;
+	margin-top: 80px;
+}
+
+.button1{
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 13px;
+	text-decoration: none;
+	background-color: #e84545;
+	padding: 18px 45px;
+	display: inline-block;
+}
+
+
+@media screen and (max-width: 960px) {
+.container{
+    width: 100%;        
+    }
+    
+     .block1 .container{
+	margin-bottom: 100px;
+}
+ .logo{
+    text-align: center;
+    margin-bottom: 1em;
+    float: none;
+    padding: 0;
+}
+    
+.menu{
+    text-align: center;
+	margin-left: auto;
+     margin-right: auto;
+	float: none;
+    padding: 0;
+}   
+    .menu a{
+    margin: 0;
+    padding: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+    
+     .title1{
+	font-size: 35px;
+	line-height: 45px;
+}
+    .menu a:last-child{
+	margin-right: 0;
+}
+    
+}
+
+@media screen and (max-width: 320px) {
+ .container{
+    width: 100%;        
+    }
+    
+    .block1 .container{
+	margin-bottom: 40px;
+}
+
+ .logo{
+    text-align: center;
+    margin-bottom: 1em;
+    float: none;
+    padding: 0;
+}
+    
+.menu{
+    text-align: center;
+	margin-left: auto;
+     margin-right: auto;
+	float: none;
+    padding: 0;
+}   
+    .menu a{
+    margin: 0;
+    display: block;
+    float: none;
+    padding: 0;
+    padding-top: 1em;
+} 
+    
+    .title1{
+	font-size: 21px;
+	line-height: 38px;
+    margin-top: -10px;
+}
+    
+}
