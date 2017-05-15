@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 0px;
+}
+
+h1, h2, h3{
+padding-top: 10px;    
+}
+
+/*-------------------task_1 Lesson_11--------------------*/
+
+#main{
+    display: flex;
+    flex-flow: column nowrap;
+ }
+
+.row{
+display:flex;    
+flex: 0 100%;
+flex-flow: row nowrap;
+background-color: #cecece;
+border: 1px solid white;
+}
+#form1{
+    flex: 0 50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.form-element{
+    flex: 0 100%;
+    display: flex;
+    padding-top: 1em;
+    border: 1px solid white;
+    background-color: #1b7c78;
+    border-radius: 10px;
+}
+#dolphin{
+    display: none;
+}
+
+input{
+    margin-top: -5px;
+    flex: 0 60%;
+    justify-content: flex-start;
+}
+.formError{
+    border: 2px solid red;
+}
+
+label{
+    color: white;
+    flex: 0 35%;
+}
+/*---------------------task_2 Lesson_11--------------------*/
+
+
+
+/*-------------------task_2_+ Lesson_11--------------------*/
+.newScreen{
+    justify-content: center;
+    position: relative;
+}
+
+#myScreen{
+    flex: 0 70%;
+    height: auto;
+    background-color: #2b2f2f;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+}
+
+#myScreen a{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+}
+
+#ArrLeft, #ArrRight{
+    display: flex;
+    align-self: center;
+    width: 30px;
+    padding: 0;
+    height: 200px;
+}
+
+#ArrLeft a, #ArrRight a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    line-height: 60px;
+    text-decoration: none;
+    background-color: #1b7c78;
+}
+
+#ArrLeft a:hover, #ArrRight a:hover{
+   color: aliceblue; 
+}
+
+#slider{
+    position: relative;
+}
+
+#BigPict{
+    position: absolute;
+    display: none;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+}
+
+#BigPict_shown{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(44, 44, 44, 0.5);
+}
+
+#BigPict_shown img{
+    height: 100%;
+}
+
+/*---------------------task_3 Lesson_11--------------------*/
+.swiper-container {
+    width: 300px;
+    height: 200px;
+    display:block;
+}
+
+.swiper-container2{
+    display: none;
+    width: 0px;
+    height: 0px;
+}

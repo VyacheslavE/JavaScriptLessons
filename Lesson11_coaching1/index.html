@@ -1,0 +1,124 @@
+<!Doctype html>
+
+    <html  lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Урок 11. JavaScript</title>
+        
+        <meta name="description" content="Flex-1">
+        <meta name="keywords"  content="Forms, JavaScript, css">
+        <meta name="viewport" content="width=device-width">
+           
+           <link rel="shortcut icon" href="img/icon.png" type="image/png">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/main.css">
+            <!------------lINK LIBRARIES Fansy--->
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+            <!---------------Swiper----------------------->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+            <!--------------------------->
+            
+    </head>
+    <body>
+       <div id="main">
+            <div class="row">
+                <h1>Урок 11</h1>
+            </div>
+            <div class="row">
+                    <h2>Задание 1</h2>
+                    <form id="form1" action="#">
+                        <div class="form-element">
+                            <label for="firstNameForm1">Введите ваше имя</label>
+                            <input type="text" id="firstNameForm1" name="firstName" placeholder="first name">
+                        </div>
+                        <div class="form-element">
+                            <label for="lastNameForm1">Введите вашу фамилию</label>
+                            <input type="text"  id="lastNameForm1" name="lastName" placeholder="last name">
+                        </div>
+                        <div class="form-element">
+                            <label></label>
+                            <input type="button" onclick="nameAction(this.form)"  value="Submit">
+                        </div>
+                        <div id="dolphin" class="form-element" >
+                            <label></label>
+                            <input type="button" onclick="restoreAll()"  value="Reset">
+                        </div>
+                    </form>
+               </div>
+               <!---------------Fansy gallery------>
+               <div class="row">
+                  <h2>Задание 2</h2>
+                   <a data-fancybox="gallery" href="img/gallery/pict_1.jpg"><img src="img/gallery/pict_1_small.jpg"></a>
+                   <a data-fancybox="gallery" href="img/gallery/pict_2.jpg"><img src="img/gallery/pict_2_small.jpg"></a>
+                   <a data-fancybox="gallery" href="img/gallery/pict_3.jpg"><img src="img/gallery/pict_3_small.jpg"></a>
+                   <a data-fancybox="gallery" href="img/gallery/pict_4.jpg"><img src="img/gallery/pict_4_small.jpg"></a>
+                   <a data-fancybox="gallery" href="img/gallery/pict_5.jpg"><img src="img/gallery/pict_5_small.jpg"></a>
+                   <a data-fancybox="gallery" href="img/gallery/pict_6.jpg"><img src="img/gallery/pict_6_small.jpg"></a>
+                </div>
+               <!---------------Task 2_plus------>
+               <div class="row newScreen">
+                   <div id="ArrLeft"><a href="#" onclick="myLeftArr()">&#60</a></div>
+                   <div id="myScreen"><a href="#"  onclick="myBigImage()"><img id="slider" src="img/gallery/pict_1_small.jpg" width="200px"/></a></div>
+                   <div id="ArrRight"><a  href="#" onclick="myRightArr()">&#62</a></div>
+                   <a  href="#" ><img id="BigPict" src="img/gallery/pict_1.jpg"/></a>
+               </div>
+               <!---------------Task 3------>
+                 <div class="row">
+                  <h2>Задание 3</h2>
+                  
+                   <script>        
+                      var mySwiper = new Swiper ('.swiper-container', {
+                        // Optional parameters
+                        direction: 'vertical',
+                        loop: true,
+
+                        // If we need pagination
+                        pagination: '.swiper-pagination',
+
+                        // Navigation arrows
+                        nextButton: '.swiper-button-next',
+                        prevButton: '.swiper-button-prev',
+
+                        // And if we need scrollbar
+                        scrollbar: '.swiper-scrollbar',
+                      })        
+                      </script>
+                  
+                  <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="img/gallery/pict_1_small.jpg"></div>
+                            <div class="swiper-slide"><img src="img/gallery/pict_2_small.jpg"></div>
+                            <div class="swiper-slide"><img src="img/gallery/pict_3_small.jpg"></div>
+                            <div class="swiper-slide"><img src="img/gallery/pict_4_small.jpg"></div>
+                            <div class="swiper-slide"><img src="img/gallery/pict_5_small.jpg"></div>
+                            <div class="swiper-slide"><img src="img/gallery/pict_6_small.jpg"></div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+    </body>
+        <script src="js/script.js"></script>
+</html>
