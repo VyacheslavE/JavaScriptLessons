@@ -90,11 +90,12 @@ function myRightArr(){
     })        
   });
 
-function myBigImage(){
     var myMainDiv=document.getElementById("main");
     var sweepSlider=document.getElementsByClassName("swiper-container");
     var sliderBig=document.createElement("div");
     var sliderBigImg=document.createElement("img");
+
+function myBigImage(){
     myMainDiv.appendChild(sliderBig);
     sliderBig.appendChild(sliderBigImg);
     //document.getElementById("firstNameForm1").classList.add("BigPict");
@@ -103,14 +104,32 @@ function myBigImage(){
     sliderBigImg.src=myGalleryBig[num];
     //sweepSlider.classList.remove("swiper-container");
     sweepSlider[0].classList.add("swiper-container2");
-    document.addEventListener("onkeypress",  myGalleryEsc(e, sweepSlider, myMainDiv, sliderBig));}
+   }
+
+ document.addEventListener("keyup",  function(e){
+     myGalleryEsc(e, sweepSlider, myMainDiv, sliderBig)
+     });
 
 function myGalleryEsc(e, sweepSlider, myMainDiv, sliderBig){ 
     if(e.key=='Escape'||e.key=='Esc'||e.keyCode==27){ 
     sweepSlider[0].classList.remove("swiper-container2");
     myMainDiv.removeChild(sliderBig);
-    alert("@@");
     }
-}
+     if(e.key=='left arrow'||e.keyCode==37){ 
+         num--;
+    if(num<0){num=myGallerySmall.length-1;}
+    slider.src=myGallerySmall[num];
+    sliderBigImg.src=myGalleryBig[num];
+     }
+
+    
+     if(e.key=='right arrow'||e.keyCode==39){
+         num++;
+    if(num>myGallerySmall.length-1){num=0;}
+    slider.src=myGallerySmall[num];
+    sliderBigImg.src=myGalleryBig[num];
+     }
+    }
 
 
+// 37< keyCode >39
