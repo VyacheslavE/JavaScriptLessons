@@ -1,0 +1,95 @@
+<!Doctype html>
+
+    <html  lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Урок 11. JavaScript</title>
+        
+        <meta name="description" content="Flex-1">
+        <meta name="keywords"  content="Forms, JavaScript, css">
+        <meta name="viewport" content="width=device-width">
+           
+           <link rel="shortcut icon" href="img/icon.png" type="image/png">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+       <div id="main">
+            <div class="row">
+                <h1>Урок 12</h1>
+            </div>
+            <div class="row">
+                    <h2>Задание 1</h2>
+                    <form id="form1" action="#">
+                        <div class="form-element">
+                            <label for="textForm1">Введите ваш текст:</label>
+                            <input type="text" id="textForm1" name="textForm1" placeholder="введите текст">
+                        </div>
+                        <div class="form-element" id="form1Output">
+                        </div>
+                        
+                        <div class="form-element">
+                            <label></label>
+                            <input type="button" onclick="textAction()"  value="Submit">
+                            <input type="button" onclick="restoreForm1()"  value="Reset">
+                        </div>
+                    </form>
+               </div>
+               <div class="row">
+                    <h2>Задание 2</h2>
+                    <form id="form2" action="#">
+                        <div class="form-element">
+                            <label for="textForm2">Введите ваш текст:</label>
+                            <input type="text" id="textForm2" name="textForm2" placeholder="введите текст">
+                            <input type="button" onclick="textAction2()"  value="Подтвердите ввод">
+                        </div>
+                        
+                        <div class="form-element" id="form2Output">
+                        </div>
+                   </form>
+                      
+                       <form id="form3" action="#">
+                        <div class="form-element">
+                            <label for="text2Form3">Что найти</label>
+                            <input type="text"  id="searchText" name="searchText" placeholder="search text">
+                            <label for="text3Form3">На что замеинть</label>
+                            <input type="text"  id="changeText" name="changeText" placeholder="change to text">
+                            <input type="button" onclick="myChangeText(this.form)"  value="Заменить">
+                        </div>
+
+                            <div class="form-element" id="form3Output"></div>
+                            <div class="form-element" id="resetForm3">
+                            <input type="button" onclick="restoreForm2()"  value="Reset form">
+                        </div>
+                   </form>
+               </div>
+               
+               <div class="row">
+                    <h2>Задание 3</h2>
+                    <form id="form4" action="#">
+                        <div class="form-element">
+                            <label for="textForm4">Введите ваш текст:</label>
+                            <input type="text" id="textForm4" name="textForm4" placeholder="введите текст">
+                            <input type="button" onclick="textAction4()"  value="Submit">
+                        </div>
+                         <div class="form-element">
+                            <label for="textForm5">Введите искомый текст:</label>
+                            <input type="text" id="textForm5" name="textForm5" placeholder="ищем...">
+                            <input type="button" onclick="myChangeText3()"  value="Search">
+                        </div>
+                        <div class="form-element" id="form4Output">
+                        </div>
+                        
+                        <div class="form-element" id="resetForm4">
+                            <input type="button" onclick="restoreForm4()"  value="Reset">
+                        </div>
+                    </form>
+               </div>
+              
+        </div>
+            
+    </body>
+        <script src="js/script.js"></script>
+</html>

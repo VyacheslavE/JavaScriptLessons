@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 0px;
+}
+
+h1, h2, h3{
+padding-top: 10px;    
+}
+
+/*-------------------task_1 Lesson_11--------------------*/
+
+#main{
+    display: flex;
+    flex-flow: column nowrap;
+ }
+
+.row{
+display:flex;    
+flex: 0 100%;
+flex-flow: row nowrap;
+background-color: #cecece;
+border: 1px solid white;
+}
+
+#form1, #form2, #form3, #form4{
+    flex: 0 40%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+#textForm5{
+    flex: 0 10%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+
+.form-element{
+    flex: 0 100%;
+    display: flex;
+    padding-top: 1em;
+    padding-right: 1em;
+    border: 1px solid white;
+    background-color: #1b7c78;
+    border-radius: 10px;
+
+}
+
+#resetForm3, #resetForm4{
+    justify-content: center;
+    align-content: center;
+}
+
+#form1Output, #form2Output, #form3Output, #form4Output{
+    height: 100px;
+}
+
+
+#dolphin{
+    display: none;
+}
+
+input{
+    margin-top: -5px;
+    flex: 0 60%;
+    justify-content: flex-start;
+}
+.formError{
+    border: 2px solid red;
+}
+
+label{
+    color: white;
+    flex: 0 35%;
+}
+/*---------------------task_2 Lesson_12--------------------*/
+
