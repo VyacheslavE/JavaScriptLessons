@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>15:15 24.05.2017
+<html lang "en">
+<head>
+	<meta charset="UTF-8">
+	<title>"Урок 12"</title>
+</head>
+<body id="body">
+	<script>
+		var mySiteBody = document.getElementById("body");
+		mySiteBody.style.backgroundColor = "#428db8";
+		var names = [{name:"Геннадий", pass:"123"}, {name:"Вячеслав", pass:"234"}, {name:"Admin", pass:"345"}, {name:"Владимир", pass:"456"}, {name:"Виктор", pass:"567"}, {name:"Семен", pass:"678"}, {name:"Александр", pass:"789"}];
+		var appropriateAge = 18;
+		var verifiableAge, verifiableName, verifiablePass, namePoint = -1;
+
+			
+		verifiableAge = +prompt("Введите свой возраст");
+
+		if(isNaN(verifiableAge)){alert("Введено не число!");}
+		else if(verifiableAge<18){alert("Вы несовершеннолетний!"); alert("Вход запрещен!");}
+		 else if(verifiableAge>120){alert("Столько не живут!");}
+		  else{
+
+		mySiteBody.style.backgroundColor = "#3ca2de";
+
+		verifiableName = prompt("Введите свое имя");
+
+		for(var i=0; i<names.length; i++){
+			if(names[i].name == verifiableName){namePoint = i;}
+		}
+		if(namePoint==-1){alert("Вашего имени нет в списке, договаривайтесь с админом!"); }
+		else {
+
+		  mySiteBody.style.backgroundColor = "#1aaaff";
+		  verifiablePass = prompt("Введите свой пароль");
+		  if(names[namePoint].pass!=verifiablePass){alert("Введен неправильный пароль!");}
+		   else {
+			 if(verifiableName=="Admin"){alert("Добро пожаловать, Admin! Вы вошли с правами Администратора."); mySiteBody.style.backgroundColor = "#8ec0fe";}
+			else{alert("Добро пожаловать, " + verifiableName + "!"); mySiteBody.style.backgroundColor = "#1aaaff";}
+	  	   }
+		  }
+		 }
+
+	</script>
+</body>
