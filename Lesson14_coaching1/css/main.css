@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+}
+
+h1, h2, h3{
+margin-top: 10px;    
+margin-bottom: 10px;    
+}
+
+/*-------------------task_1 Lesson_11--------------------*/
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column nowrap;
+ }
+
+.row{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column nowrap;
+}
+
+.inputDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f84db;
+    flex-flow: column nowrap;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+}
+
+
+#output1, #output2, #output3{
+    display: flex;
+    padding: 10px;
+    width: 50%;
+    height: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-flow: column;
+    transition: 1s;
+}

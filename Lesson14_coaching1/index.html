@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>"Урок 14"</title>
+	
+	        <link rel="shortcut icon" href="img/icon.png" type="image/png">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body">
+<div id="main">
+	<div class="row">
+	<h2>Задание 1</h2>
+		<div class="inputDiv">
+        <input type="button" onclick="textAction1()"  value="START">
+        <div id="output1">
+            
+        </div>
+
+<!----------------------------------------->
+	</div>
+
+	<div class="row">
+	<h2>Задание 2</h2>
+	<div class="inputDiv">
+        <input type="button" onclick="textAction2()"  value="START">
+        <div id="output2">
+            
+        </div>
+
+		
+	</div>
+<!----------------------------------------->
+	<div class="row">
+	<h2>Задание 3</h2>
+
+	<div class="inputDiv">
+        <input type="button" onclick="textAction3()"  value="START">
+        <div id="output3">
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <script>
+                window.onload = myLoad;
+                function myLoad(){
+                var mySiteBody = document.getElementById("body");
+                mySiteBody.style.backgroundColor = "#3b94e2";
+                }
+		
+		var myOut1=document.getElementById("output1"); 
+		var myOut2=document.getElementById("output2"); 
+		var myOut3=document.getElementById("output3"); 
+		var cities=["Харьков", "Киев", "Гданськ", "Дублин", "Варшава", "Дрезден"];
+		var fruits="яблоко; груша; слива; абрикос; дыня";
+        var myTemp, myString = "";
+        var myFlag = true;
+        var myFlag2 = true;
+        var myImmediatArr=[];
+        
+        function textAction1(){
+            myOut1.innerHTML = "<p> Исходный массив: " + cities + "</p>";
+            myOut1.style.backgroundColor = "#3be2a2";
+           setTimeout(function(){
+               myTemp="<ol>"; 
+               myTemp=myDelayOutput(cities, myTemp);
+               myTemp+="</ol>";
+               myOut1.innerHTML += "<br>\n" +myTemp; console.log(myOut1.innerHTML);}, 1000);
+        }
+        
+        function myDelayOutput(myArr, myTmp){
+            var myTmp;
+            for(var i=0; i<myArr.length; i++){
+                myTmp += "<li>" + myArr[i] + "</li>";    
+            }
+            return myTmp;
+        }
+        
+        function textAction2(){
+            myOut2.innerHTML = "<p> Исходная строка: " + fruits + "</p>";
+            myOut2.style.backgroundColor = "#34c990";
+            var myNewArray = fruits.split(";");
+            for(var i=0; i<myNewArray.length; i++){
+                myNewArray[i] = myNewArray[i].trim();
+            }
+            setTimeout(function(){
+               myTemp="<ul>"; 
+               myTemp=myDelayOutput(myNewArray, myTemp);
+               myTemp+="</ul>";
+               myOut2.innerHTML += "<br>\n" +myTemp; console.log(myOut2.innerHTML);}, 1000);
+        }
+        
+        
+        function textAction3(){
+            var myStringTemp = "";
+            while(myFlag){
+                myStringTemp=prompt("Введите слово");
+                if (myStringTemp == null || myStringTemp == ""){
+                    alert("stopped!"); myFlag=false; 
+                }else{
+                    myImmediatArr.push(myStringTemp);
+                      if(myFlag2){myString = myStringTemp; myFlag2=false;}
+                    else{myString+="; " + myStringTemp;}
+                     }
+            }
+            if(myString.length>0){
+            var myNewArray2 = myString.split(";");
+            for(var i=0; i<myNewArray2.length; i++){
+                myNewArray2[i] = myNewArray2[i].trim();
+            }
+                myNewArray2 = myNewArray2.sort();
+            setTimeout(function(){
+               myTemp="Сортированный список: <br> \n <ol>"; 
+               myTemp=myDelayOutput(myNewArray2, myTemp);
+               myTemp+="</ol>";
+               myOut3.innerHTML += "<br>\n" +myTemp; console.log(myOut3.innerHTML);}, 1000);
+//////////////////////////
+               setTimeout(function(){
+               var myTemp2="Несортированный список: <br> \n <ul>"; 
+               myTemp2=myDelayOutput(myImmediatArr, myTemp2);
+               myTemp2+="</ul>";
+               myOut3.innerHTML += "<br>\n" +myTemp2; console.log(myOut3.innerHTML);}, 2000);
+                
+                
+            }
+        }
+            </script>
+    </div>
+    </div>
+    
+</body>
+
+</html>
