@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>"Урок 16: Работа с объектами DOM HTML"</title>
+	
+	        <link rel="shortcut icon" href="img/icon.png" type="image/png">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body">
+<div id="main">
+	<div class="row">
+	 <form id="form1" action="#">
+              <div class="form-element">
+                  <label for="pass">Логин</label>
+                  <input type="text" id="login" name="login" placeholder="login">
+              </div>
+              <div class="form-element">
+                <label for="pass">Пароль</label>
+                <input type="password"  id="pass" name="pass" placeholder="pass">
+              </div>
+              <div class="form-element">
+                   <label></label>
+                   <input type="submit"  value="Submit">
+                </div>
+                <div id="msg" class="form-element" >
+                </div>
+    </form>
+    
+    <script>
+         window.onload = myLoad;
+                function myLoad(){     
+                var mySiteBody = document.getElementById("body");
+                mySiteBody.style.backgroundColor = "#3b94e2";
+                }
+        var myForm=document.getElementById("form1");
+        var myMsg=document.getElementById("msg");
+        myMsg.innerHTML = '';
+        
+        myForm.addEventListener('submit', function(event){
+        event.preventDefault();    
+        
+        
+        var myImputs=document.querySelectorAll("#form1 input");
+        
+        for(var i=0; i<myImputs.length; i++){
+            if (myImputs[i].name == 'login'){
+                if (myImputs[i].value == 'admin' ) {
+                    myMsg.innerHTML += "<h1>Пoприветствуем админа!</h1>";
+                }else{
+                    myMsg.innerHTML += "<h1>Привет, пользователь " + myImputs[i].value + "</h1><br>";
+                }
+            }
+            if (myImputs[i].name == 'pass'){
+                myMsg.innerHTML += '<p>Ваш пароль: '+ myImputs[i].value +'</p>';
+            }
+        }
+            });
+        
+        </script>
+    
+    </div>
+    </div>
+    
+</body>
+
+</html>
