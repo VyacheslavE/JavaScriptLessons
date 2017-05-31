@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding: 0.3em;
+    margin: 0px;
+}
+
+h1, h2, h3{
+margin-top: 10px;    
+margin-bottom: 10px;    
+}
+
+/*-------------------task_1 Lesson_11--------------------*/
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column nowrap;
+ }
+
+.row{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+#form1{
+    width: 30%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.form-element{
+    flex: 0 100%;
+    display: flex;
+    padding-top: 1em;
+    border: 1px solid white;
+    background-color: #1b7c78;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+
+input{
+    margin-top: -5px;
+    flex: 0 60%;
+    justify-content: flex-start;
+}
+
+#msg{
+    height: 200px;
+    display: block;
+    padding: 10px;
+}
