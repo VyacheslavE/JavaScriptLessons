@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>"Урок 15: Функции и объекты"</title>
+	
+	        <link rel="shortcut icon" href="img/icon.png" type="image/png">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="body">
+<div id="main">
+	<div class="row">
+	<h2>Задание 1</h2>
+		
+        <h1 id='title'></h1>
+        <p id='work'></p> 
+        <hr>
+        <h3>Любимая музыка</h3>
+        <ul id='music'></ul>
+        
+        <button onclick="user.accessVerify()">Проверка на админа</button>
+        <button onclick="user.ageVerify()">18+ проверка</button>
+        <button onclick="user.newMusic()">Добавить музыку</button>
+        <button onclick="user.changeWorkData()">Изменить инфо о работе</button>
+        
+    <script>
+          
+		var myOut1=document.getElementById('title'); 
+		var myOut2=document.getElementById('work'); 
+		var myOut3=document.getElementById('music'); 
+        var userNewSingerName, userNewSongname;
+		var user= {
+            fName: 'Вячеслав',
+            sName: 'Евлахов', 
+            age: 37,
+            userWorkData: {
+                            userWorkName: 'КСД',
+                            startWorkDate: '20.06.2012',
+                            salaryWork: 400,
+                            positionWork: 'техред'
+                            },
+            userFavoriteMusic: [
+                            {
+                                songSinger: 'Океан Ельзи',
+                                songName: '911'
+                            },
+                            {
+                                songSinger: 'Океан Ельзи',
+                                songName: 'На небі'
+                            },
+                            {
+                                songSinger: 'Океан Ельзи',
+                                songName: 'Мить'
+                            }
+                            ],
+            accessVerify: function(user){
+                                        if(this.fName=='admin'){alert('Whazzup, Admin!?');} else{alert('Hellow, ' + this.fName + ' you\'re not admin');}
+                                        },
+            ageVerify: function(user){if(this.age<18){alert('You are underage!');} else{alert('Gongrats, ' + this.fName + " your age - " + this.age + " allows you to use this site!");}},
+            
+            newMusic: function(user){userNewSingerName=prompt('Введите имя исполнителя'); userNewSongname=prompt('Введите название песни'); if(userNewSingerName!=""&&userNewSongname!=""){
+                var myNewComposition = {songSinger: userNewSingerName, songName: userNewSongname};
+                this.userFavoriteMusic.push(myNewComposition);
+                 myOut3.innerHTML = myListMaker(this.userFavoriteMusic);
+            }},
+            
+            changeWorkData: function(user){var wNewPlace, wNewStartData, wNewSalary, wNewPosition; 
+                                            wNewPlace=prompt("Введите новое место работы");
+                                            wNewStartData=prompt("Введите дату поступления");
+                                            wNewSalary=prompt("Введите заработную плату");
+                                            wNewPosition=prompt("Введите новую должность");
+                                           if(wNewPlace!=""||wNewStartData!=""||wNewSalary!=""||wNewPosition!=""){
+                                               this.userWorkData.userWorkName =wNewPlace;
+                                               this.userWorkData.startWorkDate =wNewStartData;
+                                               this.userWorkData.salaryWork =wNewSalary;
+                                               this.userWorkData.positionWork =wNewPosition;
+                                               myOut2.innerHTML = "Место работы: " + this.userWorkData.userWorkName + "<br>" + 
+                                        "Дата поступления на работу: " + this.userWorkData.startWorkDate + "<br>" + 
+                                        "Зарплата: " + this.userWorkData.salaryWork + "<br>" + 
+                                        "Должность: " + this.userWorkData.positionWork + "<br>";
+                                           }
+                                          },
+                                        };
+
+        function myListMaker(myArr){
+            var myTmp="";
+            for(var i=0; i<myArr.length; i++){
+                myTmp += "<li> Исполнитель: " + myArr[i].songSinger + "</li>";
+                myTmp += "<li>  Название композиции: " + myArr[i].songName + "</li>";    
+            }
+            return myTmp;
+        }
+        
+                
+        window.onload = myLoad;
+                function myLoad(){     
+                var mySiteBody = document.getElementById("body");
+                mySiteBody.style.backgroundColor = "#3b94e2";
+                    console.log(user.fName);
+                    myOut1.innerHTML = "Здравстуйте, " + user.fName + "!";
+                
+                    myOut2.innerHTML = "Место работы: " + user.userWorkData.userWorkName + "<br>" + 
+                                        "Дата поступления на работу: " + user.userWorkData.startWorkDate + "<br>" + 
+                                        "Зарплата: " + user.userWorkData.salaryWork + "<br>" + 
+                                        "Должность: " + user.userWorkData.positionWork + "<br>";
+                
+                    myOut3.innerHTML = myListMaker(user.userFavoriteMusic);
+                }
+		                
+            </script>
+    </div>
+    </div>
+    
+</body>
+
+</html>
