@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0.3em;
+    margin: 0px;
+}
+
+h1, h2, h3{
+margin-top: 10px;    
+margin-bottom: 10px;    
+}
+
+/*-------------------Coaching2 task_1 Lesson_1--------------------*/
+
+#main{
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-flow: column;
+ }
+
+#games{
+    background: #b9ae2e;
+}
+
+a{
+    font-size: 30px;    
+}
