@@ -40,7 +40,7 @@
         
         myForm.addEventListener('submit', function(event){
         event.preventDefault();    
-        
+         myMsg.innerHTML = '';
         
         var myImputs=document.querySelectorAll("#form1 input");
         
@@ -50,10 +50,12 @@
                     myMsg.innerHTML += "<h1>Пoприветствуем админа!</h1>";
                 }else{
                     myMsg.innerHTML += "<h1>Привет, пользователь " + myImputs[i].value + "</h1><br>";
+                    myImputs[i].value ="";
                 }
             }
             if (myImputs[i].name == 'pass'){
                 myMsg.innerHTML += '<p>Ваш пароль: '+ myImputs[i].value +'</p>';
+                myImputs[i].value ="";
             }
         }
             });
