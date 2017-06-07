@@ -15,7 +15,7 @@ var player = {
     inertia: 0.2,
     speed: 5,
     friction: 0.8,
-    jump: 5,
+    jump: 6,
     madeJump: false,
     gravity: 0.9,
     grounded: false,
@@ -156,10 +156,11 @@ function loop(){
     //could be friction instead i've used inertion
         //player.velX *= friction;
     ///////////////////////////////////////////////////JUMPS
-    if((keys[38] || keys[32] || keys[74]  || keys[87])&&!player.madeJump){
+    if((keys[38] || keys[32] || keys[74]  || keys[87])&&!player.madeJump&&player.grounded==true){
         player.velY = -player.jump*2;
         player.color = "rgb(40, 221, 61)";
         player.madeJump = true;
+        player.grounded = false;
     }
     
     player.y += player.velY;
