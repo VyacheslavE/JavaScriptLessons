@@ -1,0 +1,95 @@
+/*upper menu*/
+#topMenu{
+    display: flex;
+    width: 50%;
+    
+}
+#topMenu ul{
+    display: flex;
+    list-style: none;
+}
+#topMenu ul li{
+    display: flex;
+}
+#topMenu ul li a{
+    padding: 0.5em;
+    margin-right: 0.5em;
+    display: flex;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #f79470;
+    color: brown;
+    transition: 1s;
+}
+#topMenu ul li a:hover{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    background-color: #f56f3e;
+    color: #670707;
+}
+
+.topMenuActive{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    background-color: #742306;
+    color: #ffb7b7;
+}
+
+.topMenu a{
+    display: flex;
+}
+
+/*/////////////////////////////////////////////////////////////////////*/
+/*second menu*/
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+}
+
+.nav2{
+    display: grid;
+    grid-gap: 10px;
+    margin-left: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 0.4em;
+    color: #670707;
+}
+
+.nav2Inside{
+    display: flex;
+}
+
+.nav2Inside a{
+background-color: bisque;
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+padding: 0.5em;
+width: 100%;
+color: coral;
+transition: 2s;
+}
+
+.nav2Inside a:hover{
+background-color: #ff9a22;
+color: #912e09;
+transition: 2s;
+
+}
+
+
+#n2{
+    background-image: url(/img/Mars2.jpg);
+    background-size:cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+body{
+    background-image: url(/img/Mars1.jpg);
+    background-size: cover;
+    
+   
+}
